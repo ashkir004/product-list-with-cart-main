@@ -1,7 +1,12 @@
+import '@fontsource-variable/red-hat-text';
 import './App.css'
 
 function App() {
-  return <h1>Hello World</h1>;
+  return (
+  <main>
+    <h1>Hello World</h1>
+  </main>
+  );
 }
 
 export default App

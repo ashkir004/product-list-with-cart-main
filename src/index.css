@@ -1,0 +1,48 @@
+:root {
+  --clr-red: hsl(14, 86%, 42%);
+  --clr-rose-900: hsl(14, 65%, 9%);
+  --clr-rose-500: hsl(12, 20%, 44%);
+  --clr-rose-400: hsl(7, 20%, 60%);
+  --clr-rose-300: hsl(14, 25%, 72%);
+  --clr-rose-100: hsl(13, 31%, 94%);
+  --clr-rose-50: hsl(20, 50%, 98%);
+  --clr-green: hsl(159, 69%, 38%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --spacing-50: calc(4 / 16 * 1rem);
+  --spacing-100: calc(8 / 16 * 1rem);
+  --spacing-150: calc(12 / 16 * 1rem);
+  --spacing-200: calc(16 / 16 * 1rem);
+  --spacing-250: calc(20 / 16 * 1rem);
+  --spacing-300: calc(24 / 16 * 1rem);
+  --spacing-350: calc(28 / 16 * 1rem);
+  --spacing-400: calc(32 / 16 * 1rem);
+  --spacing-450: calc(36 / 16 * 1rem);
+  --spacing-500: calc(40 / 16 * 1rem);
+  --spacing-1100: calc(88 / 16 * 1rem);
+
+  --font-family: 'Red Hat Text', sans-serif;
+
+  --font-xl: calc(40 / 16 * 1rem);
+  --font-lg: calc(24 / 16 * 1rem);
+  --font-md: calc(16 / 16 * 1rem);
+  --font-sm: calc(14 / 16 * 1rem);
+
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+
+  --lheight-md: 1;
+  --lheight-lg: 1.25;
+  --lheight-xl: 1.5;
+
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--spacing-200);
+  line-height: var(--lheight-md);
+  color: var(--clr-rose-900);
+}
