@@ -12,6 +12,11 @@
   margin-bottom: calc(24 / 16 * 1rem);
 }
 
+.inCart {
+  border: 2px solid var(--clr-red);
+  border-radius: var(--spacing-100);
+}
+
 .imageBtnContainer > * {
   grid-column: 1 / -1;
   grid-row: 1 / -1;

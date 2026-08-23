@@ -16,4 +16,9 @@ type ProductList = {
     products: Product[];
 };
 
-export type { ProductList, Product };
+type CartItem = {
+    product: Product;
+    quantity: number;
+};
+
+export type { ProductList, Product, CartItem };

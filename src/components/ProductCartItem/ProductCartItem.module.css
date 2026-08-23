@@ -50,6 +50,7 @@
     background: transparent;
     border: 2px solid var(--clr-rose-300);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .removeItem img {
@@ -57,7 +58,3 @@
     height: var(--spacing-150);
     margin: 2px;
 }
-
-/* * {
-    outline: 1px solid red;
-} */

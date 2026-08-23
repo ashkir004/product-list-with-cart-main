@@ -4,7 +4,34 @@
     align-items: center;
 }
 
-.btn, .btnIncrementDecrement {
+.incrementDecrementContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: calc(8 / 16 * 1rem);
+    background-color: var(--clr-red);
+    font-size: var(--font-sm);
+    font-weight: var(--semibold);
+    width: calc(160 / 16 * 1rem);
+    height: calc(48 / 16 * 1rem);
+    border: 1px solid var(--clr-rose-400);
+    padding: calc(12 /16 * 1rem);
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    color: var(--clr-white);
+}
+
+.incrementDecrementBtn {
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+    gap: calc(12 / 16 * 1rem);
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
     width: calc(160 / 16 * 1rem);
     height: calc(48 / 16 * 1rem);
     border: 1px solid var(--clr-rose-400);
@@ -18,6 +45,7 @@
     background-color: var(--clr-white);
     font-size: var(--font-sm);
     font-weight: var(--semibold);
+    cursor: pointer;
 }
 
 .btnIncrementDecrement {
@@ -47,4 +75,5 @@
     outline: 1px solid var(--clr-white);
     border-radius: 50%;
     padding: calc(4 / 16 * 1rem);
+    background: var(--clr-red);
 }
