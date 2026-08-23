@@ -1,3 +1,9 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --clr-red: hsl(14, 86%, 42%);
   --clr-rose-900: hsl(14, 65%, 9%);
@@ -29,6 +35,7 @@
   --font-md: calc(16 / 16 * 1rem);
   --font-sm: calc(14 / 16 * 1rem);
 
+  --light: 300;
   --regular: 400;
   --medium: 500;
   --semibold: 600;

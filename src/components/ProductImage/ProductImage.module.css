@@ -1,0 +1,15 @@
+
+
+img {
+  display: block;
+  aspect-ratio: 2 / 1;
+  width: 100%;
+  height: auto;
+  border-radius: .5rem;
+}
+
+@media (min-width: 48rem) {
+  img {
+    aspect-ratio: 1 / 1;
+  }
+}

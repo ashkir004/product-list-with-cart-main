@@ -1,0 +1,50 @@
+.addToCartBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn, .btnIncrementDecrement {
+    width: calc(160 / 16 * 1rem);
+    height: calc(48 / 16 * 1rem);
+    border: 1px solid var(--clr-rose-400);
+    padding: calc(12 /16 * 1rem);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: calc(8 / 16 * 1rem);
+    background-color: var(--clr-white);
+    font-size: var(--font-sm);
+    font-weight: var(--semibold);
+}
+
+.btnIncrementDecrement {
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+    gap: calc(12 / 16 * 1rem);
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+}
+
+.cartIcon {
+    width: calc(20 / 16 * 1rem);
+    height: calc(20 / 16 * 1rem);
+}
+
+.btnText {
+    font-family: var(--font-family);
+    font-weight: var(--semibold);
+    font-size: var(--font-sm);
+    color: var(--clr-rose-900);
+}
+
+.incrementDecrementIcon {
+    width: calc(20 / 16 * 1rem);
+    height: calc(20 / 16 * 1rem);
+    outline: 1px solid var(--clr-white);
+    border-radius: 50%;
+    padding: calc(4 / 16 * 1rem);
+}

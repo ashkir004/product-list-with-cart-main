@@ -1,0 +1,23 @@
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.name {
+  font-weight: var(--light);
+  font-size: var(--font-sm);
+  color: var(--clr-rose-500);
+}
+
+.category {
+  font-weight: var(--regular);
+  font-size: var(--font-md);
+  color: var(--clr-rose-900);
+}
+
+.price {
+  font-weight: var(--medium);
+  font-size: var(--font-md);
+  color: var(--clr-red);
+}
