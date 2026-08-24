@@ -1,0 +1,120 @@
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    @media (min-width: 48rem) {
+        align-items: center;
+        padding: var(--spacing-400);
+    }
+}
+
+.modalContent {
+    background-color: white;
+    padding: var(--spacing-500) var(--spacing-300);
+    border-radius: var(--spacing-100);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+    width: 100%;
+    margin-top: auto;
+
+    @media (min-width: 48rem) {
+        margin-top: 0;
+    }
+
+    @media (min-width: 64rem) {
+        max-width: 36rem;
+        padding: var(--spacing-500);
+    }
+}
+
+.modalImage {
+    width: var(--spacing-600);
+    height: var(--spacing-600);
+    border-radius: var(--spacing-50);
+}
+
+.modalTitle {
+    font-size: var(--font-xl);
+    font-weight: var(--bold);
+    color: var(--clr-rose-900);
+    width: min-content;
+    line-height: var(--lheight-lg);
+
+    @media (min-width: 48rem) {
+        width: max-content;
+        line-height: var(--lheight-sm);
+    }
+}
+
+.modalMessage {
+    font-size: var(--font-md);
+    font-weight: var(--light);
+    color: var(--clr-rose-500);
+    line-height: var(--lheight-lg);
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+    background-color: var(--clr-rose-50);
+    padding: var(--spacing-300);
+    border-radius: var(--spacing-150);
+}
+
+.modalItems {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+.modalTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalTotalLabel {
+    color: var(--clr-rose-900);
+    font-size: var(--font-md);
+    font-weight: var(--light);
+}
+
+.modalTotalValue {
+    color: var(--clr-rose-900);
+    font-size: var(--font-lg);
+    font-weight: var(--bold);
+}
+
+.startNewOrderBtn {
+    color: var(--clr-white);
+    background-color: var(--clr-red);
+    border: none;
+    padding: var(--spacing-200) var(--spacing-300);
+    border-radius: var(--spacing-300);
+    font-size: var(--font-md);
+}
+
+.startNewOrderBtn:hover,
+.startNewOrderBtn:focus,
+.startNewOrderBtn:focus-visible,
+.startNewOrderBtn:active {
+    background-color: color-mix(in srgb, var(--clr-red) 70%, var(--clr-rose-900) 30%);
+    cursor: pointer;
+}
+
+.startNewOrderBtn:active {
+    transform: scale(0.98);
+    letter-spacing: 0.5px;
+}

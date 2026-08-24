@@ -1,15 +1,25 @@
 import styles from './ProductCart.module.css';
 import ProductCartItem from '../ProductCartItem/ProductCartItem';
 import EmptyProductCart from './EmptyProductCart';
+import OrderConfirmedModal from '../OrderConfirmedModal/OrderConfirmedModal';
 import { useCart } from '../../hooks/useCart';
+import { useCartDispatch } from '../../hooks/useCartDispatch';
+import { useState } from 'react';
 
 function ProductCart() {
     const cart = useCart();
+    const dispatch = useCartDispatch();
+    const [modalOpen, setModelOpen ] = useState(false);
     
     function calculateTotal() {
         return cart.items.reduce((total, item) => {
         return total + item.product.price * item.quantity;
         }, 0).toFixed(2);
+    }
+
+    function handleStartNewOrder() {
+        dispatch({ type: "CLEAR_CART", payload: cart.items[0] });
+        setModelOpen(false);
     }
 
     return (
@@ -43,12 +53,15 @@ function ProductCart() {
                         <p>This is a <b>carbon-neutral</b> delivery</p>
                     </div>
 
-                    <button className={styles.confirmOrder}>
+                    <button className={styles.confirmOrder}
+                        onClick={() => setModelOpen(true)}
+                        >
                         Confirm Order
                     </button>
                 </>
         }
 
+        {modalOpen && <OrderConfirmedModal handleStartNewOrder={handleStartNewOrder} />}
         </div>
     );
 }

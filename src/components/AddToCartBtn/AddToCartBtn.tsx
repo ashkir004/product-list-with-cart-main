@@ -33,11 +33,11 @@ function AddToCartBtn({ quantity, handleAddToCart, handleRemoveFromCart }: AddTo
             ) : (
                 <div className={styles.incrementDecrementContainer}>
                     <button className={styles.incrementDecrementBtn} onClick={handleRemove}>
-                        <Minus size={20} stroke-width={2.5} />
+                        <Minus size={20} strokeWidth={2.5} />
                     </button>
                     <span>{quantity}</span>
                     <button className={styles.incrementDecrementBtn} onClick={handleAdd}>
-                        <Plus size={20} stroke-width={2.5} />
+                        <Plus size={20} strokeWidth={2.5} />
                     </button>
                 </div>
             )}
