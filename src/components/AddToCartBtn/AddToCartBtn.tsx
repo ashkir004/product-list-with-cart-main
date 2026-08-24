@@ -1,7 +1,8 @@
 import styles from './AddToCartBtn.module.css';
 import cartIcon from '/assets/images/icon-add-to-cart.svg';
-import addToCartIcon from '/assets/images/icon-increment-quantity.svg';
-import removeFromCartIcon from '/assets/images/icon-decrement-quantity.svg';
+import { Plus } from 'lucide-react';
+import { Minus } from 'lucide-react';
+
 
 type AddToCartBtnProps = {
     quantity: number;
@@ -32,11 +33,11 @@ function AddToCartBtn({ quantity, handleAddToCart, handleRemoveFromCart }: AddTo
             ) : (
                 <div className={styles.incrementDecrementContainer}>
                     <button className={styles.incrementDecrementBtn} onClick={handleRemove}>
-                        <img className={styles.incrementDecrementIcon} src={removeFromCartIcon} alt="Remove from Cart" />
+                        <Minus size={20} stroke-width={2.5} />
                     </button>
                     <span>{quantity}</span>
                     <button className={styles.incrementDecrementBtn} onClick={handleAdd}>
-                        <img className={styles.incrementDecrementIcon} src={addToCartIcon} alt="Add to Cart" />
+                        <Plus size={20} stroke-width={2.5} />
                     </button>
                 </div>
             )}

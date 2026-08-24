@@ -22,15 +22,6 @@
     color: var(--clr-white);
 }
 
-.incrementDecrementBtn {
-    background-color: var(--clr-red);
-    color: var(--clr-white);
-    gap: calc(12 / 16 * 1rem);
-    justify-content: space-between;
-    border: none;
-    cursor: pointer;
-}
-
 .btn {
     width: calc(160 / 16 * 1rem);
     height: calc(48 / 16 * 1rem);
@@ -48,13 +39,12 @@
     cursor: pointer;
 }
 
-.btnIncrementDecrement {
-    background-color: var(--clr-red);
-    color: var(--clr-white);
-    gap: calc(12 / 16 * 1rem);
-    justify-content: space-between;
-    border: none;
-    cursor: pointer;
+.btn:hover {
+    border: 1px solid var(--clr-red);
+}
+
+.btn:hover .btnText {
+    color: var(--clr-red);
 }
 
 .cartIcon {
@@ -69,11 +59,23 @@
     color: var(--clr-rose-900);
 }
 
-.incrementDecrementIcon {
+.incrementDecrementBtn {
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--clr-white);
+    border-radius: 50%;
+    cursor: pointer;
     width: calc(20 / 16 * 1rem);
     height: calc(20 / 16 * 1rem);
-    outline: 1px solid var(--clr-white);
+}
+
+.incrementDecrementBtn:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-red);
     border-radius: 50%;
-    padding: calc(4 / 16 * 1rem);
-    background: var(--clr-red);
+    padding: 0;
+    outline: 0;
 }

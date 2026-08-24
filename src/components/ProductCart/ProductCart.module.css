@@ -67,6 +67,19 @@
     font-size: var(--font-md);
 }
 
+.confirmOrder:hover,
+.confirmOrder:focus,
+.confirmOrder:focus-visible,
+.confirmOrder:active {
+    background-color: color-mix(in srgb, var(--clr-red) 70%, var(--clr-rose-900) 30%);
+    cursor: pointer;
+}
+
+.confirmOrder:active {
+    transform: scale(0.98);
+    letter-spacing: 0.5px;
+}
+
 .emptyProductCart {
     display: flex;
     flex-direction: column;

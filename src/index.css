@@ -53,3 +53,8 @@ body {
   line-height: var(--lheight-md);
   color: var(--clr-rose-900);
 }
+
+*:focus-visible {
+  outline: 2px solid var(--clr-red);
+  outline-offset: 0px;
+}
