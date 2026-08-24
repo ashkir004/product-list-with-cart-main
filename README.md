@@ -1,77 +1,69 @@
-# React + TypeScript + Vite
+# Product list with cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive dessert shopping interface built as a solution to the [Frontend Mentor Product list with cart challenge](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d).
 
-Currently, two official plugins are available:
+The app lets users browse a dessert menu, add products to a cart, adjust quantities, remove products, review the order total, and confirm or reset an order.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## The challenge
 
-## React Compiler
+Users should be able to:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Add items to the cart and remove them
+- Increase/decrease the number of items in the cart
+- See an order confirmation modal when they click "Confirm Order"
+- Reset their selections when they click "Start New Order"
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-Note: This will impact Vite dev & build performances.
+## Built with
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- CSS Modules
+- React Context and `useReducer` for cart state
+- `@fontsource-variable/red-hat-text` for typography
+- pnpm for package management
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## State management
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Cart state is provided at the application root by `CartProvider`. Components read the current cart through `useCart()` and dispatch actions through `useCartDispatch()`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The reducer handles:
 
+- `ADD_ITEM` for adding a new product
+- `UPDATE_ITEM` for changing a product quantity
+- `REMOVE_ITEM` for removing a product completely
+- `CLEAR_CART` for starting a new order
+
+The cart is the single source of truth for product quantities, so product-card controls update automatically when a cart item is removed elsewhere in the interface.
+
+## Styling
+
+The interface uses CSS Modules so component styles stay locally scoped and do not leak into other parts of the application. Stylesheets use the `*.module.css` naming convention and are imported as a `styles` object:
+
+```tsx
+import styles from './ProductCard.module.css';
+
+function ProductCard() {
+	return <div className={styles.productCard}>...</div>;
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Each reusable component keeps its stylesheet beside its implementation, for example `ProductCard/ProductCard.tsx` and `ProductCard/ProductCard.module.css`. Global design tokens, typography, and base styles are defined in `src/index.css`, while layout and component-specific presentation live in their corresponding CSS Modules.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Data and assets
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Product metadata is stored in [`src/data/data.json`](src/data/data.json). Images and interface icons are served from [`public/assets/images`](public/assets/images).
 
-```
+## Links
+
+- Solution URL: [product-list-with-cart](https://github.com/ashkir004/product-with-list-cart)
+- Live Site URL: [product-list-w-cart](https://your-live-site-url.com)
+
+## Author
+
+- Frontend Mentor - [@ashkir004](https://www.frontendmentor.io/profile/ashkir004)
+
+
