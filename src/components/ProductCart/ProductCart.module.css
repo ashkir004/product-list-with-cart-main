@@ -66,3 +66,23 @@
     border-radius: var(--spacing-300);
     font-size: var(--font-md);
 }
+
+.emptyProductCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-200);
+    padding: var(--spacing-300);
+}
+
+.emptyCartImage {
+    width: calc(128 / 16 * 1rem);
+    height: calc(128 / 16 * 1rem);
+}
+
+.emptyCartText {
+    color: var(--clr-rose-500);
+    font-size: var(--font-sm);
+    font-weight: var(--semibold);
+}

@@ -1,5 +1,6 @@
 import styles from './ProductCart.module.css';
 import ProductCartItem from '../ProductCartItem/ProductCartItem';
+import EmptyProductCart from './EmptyProductCart';
 import { useCart } from '../../hooks/useCart';
 
 function ProductCart() {
@@ -14,33 +15,39 @@ function ProductCart() {
     return (
         <div className={styles.productCart}>
             <h2 className={styles.cartTitle}>Your Cart ({cart.items.length})</h2>
-            <div className={styles.cartItems}>
 
-                {cart.items.map((item) => (
-                    <ProductCartItem
-                        key={item.product.id}
-                        id={item.product.id}
-                        name={item.product['name']}
-                        price={item.product['price']}
-                        quantity={item.quantity}
-                    />
-                ))}
+            {cart.items.length === 0 ? (
+                <EmptyProductCart />
+            ) : <>
+                    <div className={styles.cartItems}>
 
-            </div>
+                        {cart.items.map((item) => (
+                            <ProductCartItem
+                                key={item.product.id}
+                                id={item.product.id}
+                                name={item.product['name']}
+                                price={item.product['price']}
+                                quantity={item.quantity}
+                            />
+                        ))}
 
-            <div className={styles.totals}>
-                <p className={styles.totalsLabel}>Order Total</p>
-                <span className={styles.totalsValue}>${calculateTotal()}</span>
-            </div>
+                    </div>
 
-            <div className={styles.carbonNeutral}>
-                <img src="/assets/images/icon-carbon-neutral.svg" alt='carbon neutral' />
-                <p>This is a <b>carbon-neutral</b> delivery</p>
-            </div>
+                    <div className={styles.totals}>
+                        <p className={styles.totalsLabel}>Order Total</p>
+                        <span className={styles.totalsValue}>${calculateTotal()}</span>
+                    </div>
 
-            <button className={styles.confirmOrder}>
-                Confirm Order
-            </button>
+                    <div className={styles.carbonNeutral}>
+                        <img src="/assets/images/icon-carbon-neutral.svg" alt='carbon neutral' />
+                        <p>This is a <b>carbon-neutral</b> delivery</p>
+                    </div>
+
+                    <button className={styles.confirmOrder}>
+                        Confirm Order
+                    </button>
+                </>
+        }
 
         </div>
     );
