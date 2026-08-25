@@ -54,7 +54,7 @@
 }
 
 .carbonNeutral p {
-    color: var(-clr-rose-900);
+    color: var(--clr-rose-900);
     font-size: var(--font-sm);
 }
 
