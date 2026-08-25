@@ -60,7 +60,7 @@ Product metadata is stored in [`src/data/data.json`](src/data/data.json). Images
 ## Links
 
 - Solution URL: [product-list-with-cart](https://github.com/ashkir004/product-with-list-cart)
-- Live Site URL: [product-list-w-cart](https://your-live-site-url.com)
+- Live Site URL: [product-list-w-cart](https://product-list-w-cart.netlify.app/)
 
 ## Author
 
