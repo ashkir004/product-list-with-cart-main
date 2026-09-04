@@ -5,6 +5,10 @@
     flex-direction: column;
     gap: var(--spacing-400);
     background-color: var(--clr-rose-50);
+
+    @media (min-width: 64rem) {
+        padding: 4rem;
+    }
 }
 
 .productListWithCart {
